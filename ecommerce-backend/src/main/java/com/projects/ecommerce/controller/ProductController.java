@@ -2,6 +2,7 @@ package com.projects.ecommerce.controller;
 
 import com.projects.ecommerce.entity.ImageModel;
 import com.projects.ecommerce.entity.Product;
+import com.projects.ecommerce.dto.SearchRequest;
 import com.projects.ecommerce.helper.MultiPartFileProcessor;
 import com.projects.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,5 +51,8 @@ public class ProductController {
             throw  new RuntimeException("Invalid file!!");
         }
         return productService.updateProduct(product);
+    }
+    public List<Product>  searchProduct(@RequestBody SearchRequest request){
+        return null;
     }
 }
